@@ -79,7 +79,8 @@ def langJS(jsfiles):
 """Python Code - Execute"""
 def langPy(pyfiles):
     f = open(exec_file, "w")
-    proc = subprocess.Popen(["python3", "text.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    exec_command = ["python3", "text.py"]
+    proc = subprocess.Popen(exec_command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     for line in proc.stdout:
         sys.stdout.write(line.decode('utf-8'))
         f.write(line.decode('utf-8'))
