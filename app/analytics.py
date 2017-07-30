@@ -7,8 +7,7 @@ import datetime
 import subprocess
 from subprocess import call
 from memprof import *
-# import cProfile
-# import re
+
 def run(language):
     print("Language detected: " + language)
     print("User: %s" % (getpass.getuser()))
