@@ -6,8 +6,9 @@ from subprocess import call
 def codeCompile(file_type, files):
     print("Exeucting Language:")
     # Compile
-    language[file_type](files)
+    output_file = language[file_type](files)
     #reset()
+    return output_file
 
 
 """Clear the files after storing the data"""
@@ -62,7 +63,7 @@ def langJava(javafiles):
         # Compile
         with open(compile_file, "a") as outfile:
             compile_command = ["javac", javafile]
-            subprocess.call(compile_command, stderror=outfile)
+            subprocess.call(compile_command, stderr=outfile)
         compile_command = ["javac", javafile, "&>>", compile_file]
         subprocess.call(compile_command)
     # Execute
@@ -82,13 +83,9 @@ def langPy(pyfiles):
     for line in proc.stdout:
         sys.stdout.write(line.decode('utf-8'))
         logfile.write(line.decode('utf-8'))
-    proc.wait()
-    # with open(exec_file, "w") as outfile:
-    #     exec_command = ["python3", "text.py"]
-    #     subprocess.run(exec_command, stdout=outfile, stderror=outfile)
-    # for pyfile in pyfiles:
-    #     exec_command = ["python3", pyfile]
-    #     subprocess.call(exec_command, shell=True)
+    proc.wait
+    with open(exec_file, "r") as f:
+        return f.read()
 
 
 """Dictionary of Supported Languages"""
