@@ -84,10 +84,9 @@ def langPy(pyfiles):
         sys.stdout.write(line.decode('utf-8'))
         logfile.write(line.decode('utf-8'))
     proc.wait
-    send = ""
+    logfile.close()
     with open(exec_file, "r") as f:
-         send = f.read()
-    return send
+         return f.read()
 
 
 """Dictionary of Supported Languages"""
