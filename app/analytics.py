@@ -9,21 +9,19 @@ from subprocess import call
 from memprof import *
 
 def analyze(language):
-    f = open(analytics_file, "w")
+    analytics = {}
     start = time.clock()
     runTime = time.time()
-    f.write("Language detected: " + language + "\n")
+    analytics["Language Detected"] = language
     data = str(getpass.getuser())
-    f.write("User: " + data + "\n")
+    analytics["User"] = data
     data = str(time.asctime(time.localtime(time.time())))
-    f.write("Boot Time: " + data + "\n")
+    analytics["Boot Time"] = data
     data = str(time.clock() - start)
-    f.write("Memory (CPU): " + data + "\n")
+    analytics["Memory (CPU)"] = data
     data = str((time.time() - runTime) * 1000)
-    f.write("Runtime: " + data + "\n")
-    f.close()
-    with open(analytics_file, "r") as f:
-        return f.read()
+    analytics["Runtime"] = data
+    return analytics
 
 
 @memprof(threshold = 1)
@@ -31,8 +29,6 @@ def memeproof():
     RAM = ["python3", "-m", "memprof", "text.py"]
     subprocess.call(RAM)
 
-
-analytics_file = "analytics_file.txt"
 
 analyze("Python")
 memeproof()

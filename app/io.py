@@ -2,6 +2,7 @@ from flask import Flask, request, json, jsonify
 
 from language_detect import detect
 from unix_compile import codeCompile
+from analytics import analyze
 
 app = Flask(__name__)
 
