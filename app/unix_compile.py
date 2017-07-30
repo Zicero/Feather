@@ -61,7 +61,7 @@ def langJava(javafiles):
         # Compile
         with open(compile_file, "a") as outfile:
             compile_command = ["javac", javafile]
-            subprocess.call(compile_command)
+            subprocess.call(compile_command, stderror=outfile)
         compile_command = ["javac", javafile, "&>>", compile_file]
         subprocess.call(compile_command)
     # Execute
@@ -78,7 +78,7 @@ def langJS(jsfiles):
 def langPy(pyfiles):
     with open(exec_file, "w") as outfile:
         exec_command = ["python3", "text.py"]
-        subprocess.call(exec_command, stdout=outfile)
+        subprocess.call(exec_command, stdout=outfile, stderror=outfile)
     # for pyfile in pyfiles:
     #     exec_command = ["python3", pyfile]
     #     subprocess.call(exec_command, shell=True)
