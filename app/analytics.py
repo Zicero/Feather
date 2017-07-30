@@ -20,7 +20,6 @@ start = time.clock()
 runTime = time.time()
 run("Python")
 
-#
 @memprof(threshold = 1)
 def memeproof():
 	RAM = ["python3", "-m", "memprof", "text.py"]
