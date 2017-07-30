@@ -30,8 +30,9 @@ def parse_request():
 
     #Obj to be shipped
     obj = {}
-    obj['output'] = codeCompile(lang, ["text.py"])
     obj['code'] = code_string
+    obj['output'] = codeCompile(lang, ["text.py"])
+    obj['analytics'] = analyze(lang)
 
     return (jsonify(obj))
 
