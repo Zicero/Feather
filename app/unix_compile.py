@@ -73,9 +73,11 @@ def langJS(jsfiles):
 
 """Python Code - Execute"""
 def langPy(pyfiles):
-    for pyfile in pyfiles:
-        exec_command = ["py", pyfile]
-        subprocess.call(exec_command, shell=True)
+    f = open(compile_file, "w")
+    subprocess.call(["python3", "text.py"], stdout=f)
+    # for pyfile in pyfiles:
+    #     exec_command = ["python3", pyfile]
+    #     subprocess.call(exec_command, shell=True)
 
 
 """Dictionary of Supported Languages"""

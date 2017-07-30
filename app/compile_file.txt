@@ -1,118 +1,20 @@
-g++: error: test.cpp: No such file or directory
-g++: fatal error: no input files
-compilation terminated.
-g++: error: test.o: No such file or directory
-g++: fatal error: no input files
-compilation terminated.
-In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\postypes.h:40:0,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iosfwd:40,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
-                 from test.cpp:1:
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:164:11: error: '::vfwscanf' has not been declared
-   using ::vfwscanf;
-           ^~~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:170:11: error: '::vswscanf' has not been declared
-   using ::vswscanf;
-           ^~~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:174:11: error: '::vwscanf' has not been declared
-   using ::vwscanf;
-           ^~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:191:11: error: '::wcstof' has not been declared
-   using ::wcstof;
-           ^~~~~~
-In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.h:39:0,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.h:37,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:44,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
-                 from test.cpp:1:
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwctype:89:11: error: '::iswblank' has not been declared
-   using ::iswblank;
-           ^~~~~~~~
-g++: error: test.o: No such file or directory
-g++: fatal error: no input files
-compilation terminated.
-In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\postypes.h:40:0,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iosfwd:40,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
-                 from test.cpp:1:
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:164:11: error: '::vfwscanf' has not been declared
-   using ::vfwscanf;
-           ^~~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:170:11: error: '::vswscanf' has not been declared
-   using ::vswscanf;
-           ^~~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:174:11: error: '::vwscanf' has not been declared
-   using ::vwscanf;
-           ^~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:191:11: error: '::wcstof' has not been declared
-   using ::wcstof;
-           ^~~~~~
-In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.h:39:0,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.h:37,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:44,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
-                 from test.cpp:1:
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwctype:89:11: error: '::iswblank' has not been declared
-   using ::iswblank;
-           ^~~~~~~~
-test.cpp: In function 'int main(int, char**)':
-test.cpp:7:5: error: expected ';' before 'return'
-     return 0;
-     ^~~~~~
-g++: error: test.o: No such file or directory
-g++: fatal error: no input files
-compilation terminated.
-In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\postypes.h:40:0,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iosfwd:40,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
-                 from test.cpp:1:
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:164:11: error: '::vfwscanf' has not been declared
-   using ::vfwscanf;
-           ^~~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:170:11: error: '::vswscanf' has not been declared
-   using ::vswscanf;
-           ^~~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:174:11: error: '::vwscanf' has not been declared
-   using ::vwscanf;
-           ^~~~~~~
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:191:11: error: '::wcstof' has not been declared
-   using ::wcstof;
-           ^~~~~~
-In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.h:39:0,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.h:37,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:44,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
-                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
-                 from test.cpp:1:
-d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwctype:89:11: error: '::iswblank' has not been declared
-   using ::iswblank;
-           ^~~~~~~~
-test.cpp: In function 'int main(int, char**)':
-test.cpp:7:5: error: expected ';' before 'return'
-     return 0;
-     ^~~~~~
-g++: error: test.o: No such file or directory
-g++: fatal error: no input files
-compilation terminated.
-test.cpp: In function 'int main(int, char**)':
-test.cpp:7:5: error: expected ';' before 'return'
-     return 0;
-     ^~~~~~
-g++: error: test.o: No such file or directory
-g++: fatal error: no input files
-compilation terminated.
-test.cpp: In function 'int main(int, char**)':
-test.cpp:7:5: error: expected ';' before 'return'
-     return 0;
-     ^~~~~~
-g++: error: test.o: No such file or directory
-g++: fatal error: no input files
-compilation terminated.
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "foo": "bar"
+  }, 
+  "headers": {
+    "Accept-Encoding": "identity", 
+    "Connection": "close", 
+    "Content-Length": "7", 
+    "Content-Type": "application/x-www-form-urlencoded", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Python-urllib/3.5"
+  }, 
+  "json": null, 
+  "origin": "173.198.89.251", 
+  "url": "https://httpbin.org/post"
+}
+
