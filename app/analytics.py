@@ -8,15 +8,20 @@ import subprocess
 from subprocess import call
 from memprof import *
 
-def run(language):
-    print("Language detected: " + language)
-    print("User: %s" % (getpass.getuser()))
-    print("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
-    print("Memory (CPU): %s" % ((time.clock() - start)))
-    print("Runtime: %s" % ((time.time() - runTime) * 1000))
+def analyze(language):
+	f = open(analytics_file, "w")
+	start = time.clock()
+	runTime = time.time()
+    f.write("Language detected: " + language)
+    f.write("User: %s" % (getpass.getuser()))
+    f.wirte("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
+    f.write("Memory (CPU): %s" % ((time.clock() - start)))
+    f.write("Runtime: %s" % ((time.time() - runTime) * 1000))
+    
 
 start = time.clock()
 runTime = time.time()
+
 run("Python")
 
 @memprof(threshold = 1)
