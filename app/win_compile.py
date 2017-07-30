@@ -22,7 +22,7 @@ def langC(cfiles):
     ofiles = []
     for cfile in cfiles:
         # Compile
-        compile_command = ["gcc", "-ansi", "-pedantic-errors", "-Wall", "-c", cfile, "2>>", compile_file]
+        compile_command = ["gcc", "-pedantic-errors", "-Wall", "-c", cfile, "2>>", compile_file]
         subprocess.call(compile_command, shell=True)
         # Prepare Object files
         ofiles.append(cfile[:-1])
@@ -41,7 +41,7 @@ def langCpp(cppfiles):
     ofiles = []
     for cppfile in cppfiles:
         # Compile
-        compile_command = ["g++", "-ansi", "-pedantic-errors", "-Wall", "-c", cppfile, "2>>", compile_file]
+        compile_command = ["g++", "-pedantic-errors", "-Wall", "-c", cppfile, "2>>", compile_file]
         subprocess.call(compile_command, shell=True)
         # Prepare Object files
         ofiles.append(cppfile[:-3])
@@ -93,6 +93,6 @@ compile_file = "compile_file.txt"
 exec_file = "exec_file.txt"
 source_folder = "test_code"
 
-files = ["test.cpp"]
-codeCompile("C++", files);
-print("Exit!")
+#files = ["test.cpp"]
+#codeCompile("C++", files);
+#print("Exit!")
