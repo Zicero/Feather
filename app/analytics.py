@@ -21,14 +21,15 @@ def analyze(language):
     analytics["Memory (CPU)"] = data
     data = str((time.time() - runTime) * 1000)
     analytics["Runtime"] = data
+    memeproof()
     return analytics
 
 
 @memprof(threshold = 1)
 def memeproof():
-    RAM = ["python3", "-m", "memprof", "text.py"]
+    RAM = ["python3", "-m", "memprof", "-p", "text.py"]
     subprocess.call(RAM)
 
 
-analyze("Python")
-memeproof()
+#analyze("Python")
+#memeproof()
