@@ -50,7 +50,9 @@ def parse_request():
     obj = {}
     obj['code'] = code_string
     obj['output'] = codeCompile(lang, files)
-    obj['analytics'] = analyze(lang)
+    obj['analytics'] = {}
+    if lang == "Python":
+        obj['analytics'] = analyze(lang, files[0])
 
     return (jsonify(obj))
 

@@ -8,7 +8,7 @@ import subprocess
 from subprocess import call
 from memprof import *
 
-def analyze(language):
+def analyze(language, input_file):
     analytics = {}
     start = time.clock()
     runTime = time.time()
@@ -21,13 +21,13 @@ def analyze(language):
     analytics["Memory (CPU)"] = data
     data = str((time.time() - runTime) * 1000)
     analytics["Runtime"] = data
-    memeproof()
+    memeproof(input_file)
     return analytics
 
 
 @memprof(plot = True)
-def memeproof():
-    RAM = ["python3", "-m", "memprof", "text.py"]
+def memeproof(input_file):
+    RAM = ["python3", "-m", "memprof", input_file]
     subprocess.call(RAM)
 
 
