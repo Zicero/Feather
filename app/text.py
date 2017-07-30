@@ -1,11 +1,11 @@
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+load_test(TestCase1(test_params1))
+load_test(TestCase2(test_params2))
+...
+load_test(TestCaseN(test_params3))
 
-url = 'https://httpbin.org/post' # Set destination URL here
-post_fields = {'foo': 'bar'}     # Set POST fields here
+...
 
-request = Request(url, urlencode(post_fields).encode())
-json = urlopen(request).read().decode()
-print(json)
+for test in loaded_tests:
+    test.run()
 
         

@@ -23,7 +23,7 @@ run("Python")
 
 
 RAMCOM = ["python", "-m", "memory_profiler", "text.py"]
-print("RAM Usage: %s" % (subprocess.call(RAMCOM, shell=True)))
+print("RAM Usage: %s" % (subprocess.call(RAMCOM)))
 
 # #python
 # print("Language detected: Python")
