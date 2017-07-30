@@ -1,10 +1,9 @@
 from string import *
 
 # Detect either Javascript, C, or Python
-
 def detect(snippet):
-	js_key = ['var', 'let', '=>', '']
-	c_key = ['#include', '*', '&']
+	js_key = ['var', 'let', '=>']
+	c_key = ['#include', '*', '&', 'struct', 'typedef']
 	py_key = ['def', 'from']
 
 	split_result = snippet.split()
@@ -21,4 +20,4 @@ def detect(snippet):
 		else:
 			language = 'Error: Unable To Detect Language'
 
-	print(language)
+	return language

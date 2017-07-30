@@ -50,7 +50,10 @@ def langJS(jsfiles):
 
 
 """Dictionary of Supported Languages"""
-language = {"C": langC, "Python": langPy, "JavaScript": langJS}
+language = {
+    "C": langC,
+    "JavaScript": langJS,
+    "Python": langPy}
 
 
 """Files"""
