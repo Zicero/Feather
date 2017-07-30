@@ -32,7 +32,7 @@ def langC(cfiles):
     object_command = ["gcc", "-o", "code"] + ofiles + ["2>>", compile_file]
     subprocess.call(object_command, shell=True)
     #Execute
-    exec_command = ["./code", "1>>", exec_file]
+    exec_command = ["code", "1>>", exec_file]
     subprocess.call(exec_command, shell=True)
 
 
