@@ -21,11 +21,13 @@ def run(language):
 start = time.clock()
 runTime = time.time()
 run("Python")
+memeproof()
 
-@memprof
+@memprof(threshold = 1024)
+def memeproof():
+	ramcom = ["python", "-m", "memprof", "text.py"]
+	print("RAM Usage: %s" % (subprocess.call(ramcom, shell=True)))
 # memory_profiler
-RAMCOM = ["python", "-m", "memeprof", "text.py"]
-print("RAM Usage: %s" % (subprocess.call(RAMCOM, shell=True)))
 
 # #python
 # print("Language detected: Python")
