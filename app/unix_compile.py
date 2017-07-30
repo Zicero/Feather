@@ -85,7 +85,9 @@ def langJava(javafiles):
 
 """JavaScript Code - Execute"""
 def langJS(jsfiles):
-    print("WIP")
+    exec_command = ["node", jsfiles[0]]
+    parse(exec_file, exec_command)
+    return exec_file
 
 
 """Python Code - Execute"""
