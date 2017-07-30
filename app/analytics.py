@@ -2,22 +2,18 @@ import time
 from time import clock
 import os
 
-#python
 start = time.clock()
+end = time.clock()
+
+#python
 print("Language detected: Python")
-print("Runtime: %s" % (time.clock() - start));
-print("Memory Usage (CPU): %s" % (time.CLOCK_PROCESS_CPUTIME_ID))
-print("CPU TIME CLOCK: %s" % (time.CLOCK_THREAD_CPUTIME_ID))
+print("Memory (CPU): %s" % (time.clock() - start));
 # print("Memory Usage: %s" % (os.stat)
 
 #javascript
 print("Language detected: JavaScript")
-print("Runtime: %s" % (time.clock() - start));
-print("Memory Usage (CPU): %s" % (time.CLOCK_PROCESS_CPUTIME_ID))
-print("CPU TIME CLOCK: %s" % (time.CLOCK_THREAD_CPUTIME_ID))
+print("Memory (CPU): %s" % (time.clock() - start));
 
 #C
 print("Language detected: C")
-print("Runtime: %s" % (time.clock() - start));
-print("Memory Usage (CPU): %s" % (time.CLOCK_PROCESS_CPUTIME_ID))
-print("CPU TIME CLOCK: %s" % (time.CLOCK_THREAD_CPUTIME_ID))
+print("Memory (CPU): %s" % (time.clock() - start));
