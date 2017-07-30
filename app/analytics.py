@@ -17,12 +17,7 @@ def analyze(language):
     f.wirte("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
     f.write("Memory (CPU): %s" % ((time.clock() - start)))
     f.write("Runtime: %s" % ((time.time() - runTime) * 1000))
-    
 
-start = time.clock()
-runTime = time.time()
-
-run("Python")
 
 @memprof(threshold = 1)
 def memeproof():
@@ -30,4 +25,7 @@ def memeproof():
 	subprocess.call(RAM)
 
 
+analytics_file = "analytics_file.txt"	
+
+analyze("Python")
 memeproof()
