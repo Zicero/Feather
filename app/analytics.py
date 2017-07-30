@@ -10,7 +10,6 @@ runTime = time.time()
 print("Language detected: Python")
 print("Memory (CPU): %s" % ((time.clock() - start)))
 print("Runtime: %s" % (time.time() - runTime))
-# print("Memory Usage: %s" % (os.stat)
 
 #javascript
 print("Language detected: JavaScript")
