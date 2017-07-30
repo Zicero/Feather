@@ -89,8 +89,8 @@ def langJS(jsfiles):
 
 
 """Python Code - Execute"""
-def langPy(pyfile):
-    exec_command = ["python3", pyfile]
+def langPy(pyfiles):
+    exec_command = ["python3", pyfiles[0]]
     parse(exec_file, exec_command)
     return exec_file
 

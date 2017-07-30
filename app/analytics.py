@@ -25,9 +25,9 @@ def analyze(language):
     return analytics
 
 
-@memprof(threshold = 1)
+@memprof(plot = True)
 def memeproof():
-    RAM = ["python3", "-m", "memprof", "-p", "text.py"]
+    RAM = ["python3", "-m", "memprof", "text.py"]
     subprocess.call(RAM)
 
 

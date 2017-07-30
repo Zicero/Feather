@@ -8,18 +8,17 @@ def detect(snippet):
     x = False
 
     split_result = snippet.split()
+    language = "Error: Unable to Detect Language"
+
     for w in split_result:
         if w in js_key:
             language = 'Javascript'
-            x = True
+            break
         elif w in c_key:
             language = 'C'
-            x = True
+            break
         elif w in py_key:
             language = 'Python'
-            x = True
-        else :
-            if (x == False):
-                language = 'Error: Unable To Detect Language'
+            break
 
     return language
