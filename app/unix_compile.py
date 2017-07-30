@@ -78,7 +78,7 @@ def langJS(jsfiles):
 def langPy(pyfiles):
     with open(exec_file, "w") as outfile:
         exec_command = ["python3", "text.py"]
-        subprocess.Popen(exec_command, stdout=outfile, stderror=outfile)
+        subprocess.call(exec_command, stdout=outfile)
     # for pyfile in pyfiles:
     #     exec_command = ["python3", pyfile]
     #     subprocess.call(exec_command, shell=True)
