@@ -1,1 +1,1 @@
-console.log('locghjgkuojkjbkol')
+console.log('lol')

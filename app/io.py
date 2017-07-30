@@ -30,13 +30,17 @@ def parse_request():
     code_string = code_string.lstrip()
     print (code_string)
 
+    #Prepping obj for return
+    obj = {}
+    obj['code'] = code_string
+
     #Detects code language
     lang = detect(code_string)
     print (lang)
-    dict = {}
-    dict['error'] = lang
-    if lang == 'Error: Unable To Detect Language':
-        return (jsonify(dict))
+
+    if lang == 'Error: Unable to Detect Language':
+        obj['error'] = "UNABLE TO DETECT INPUT LANGUAGE."
+        return (jsonify(obj))
 
     files = []
     files.append("text." + extensions[lang])
@@ -46,9 +50,7 @@ def parse_request():
     test.write(code_string)
     test.close()
 
-    #Obj to be shipped
-    obj = {}
-    obj['code'] = code_string
+    #Prepping for return
     obj['output'] = codeCompile(lang, files)
     obj['analytics'] = {}
     if lang == "Python":
