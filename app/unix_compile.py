@@ -5,10 +5,10 @@ from subprocess import call
 """Compile the code with the corresponding tools"""
 def codeCompile(file_type, files):
     print("Exeucting Language:")
-    # Compile
     output_file = language[file_type](files)
     #reset()
-    return output_file
+    with open(output_file, "r") as f:
+        return f.read()
 
 
 """Clear the files after storing the data"""
@@ -78,15 +78,13 @@ def langJS(jsfiles):
 
 """Python Code - Execute"""
 def langPy(pyfiles):
-    logfile = open(exec_file, "w")
-    proc=subprocess.Popen(["python3", "text.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    f = open(exec_file, "w")
+    proc = subprocess.Popen(["python3", "text.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     for line in proc.stdout:
         sys.stdout.write(line.decode('utf-8'))
-        logfile.write(line.decode('utf-8'))
+        f.write(line.decode('utf-8'))
     proc.wait
-    logfile.close()
-    with open(exec_file, "r") as f:
-         return f.read()
+    return exec_file
 
 
 """Dictionary of Supported Languages"""

@@ -15,6 +15,7 @@ def parse_request():
     data_receive = request.json
     code_string = data_receive['code']['text']
     code_string.strip()
+
     code_string = code_string.lstrip()
     print (code_string)
 
