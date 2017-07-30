@@ -5,10 +5,19 @@ from subprocess import call
 """Compile the code with the corresponding tools"""
 def codeCompile(file_type, files):
     print("Exeucting Language:")
-    # Compile
     output_file = language[file_type](files)
     #reset()
-    return output_file
+    with open(output_file, "r") as f:
+        return f.read()
+
+
+def parse(save_file, command):
+    f = open(save_file, "w")
+    proc = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    for line in proc.stdout:
+        sys.stdout.write(line.decode('utf-8'))
+        f.write(line.decode('utf-8'))
+    proc.wait
 
 
 """Clear the files after storing the data"""
@@ -24,36 +33,39 @@ def langC(cfiles):
     ofiles = []
     for cfile in cfiles:
         # Compile
-        compile_command = ["gcc", "-pedantic-errors", "-Wall", "-c", cfile, "&>>", compile_file]
-        subprocess.call(compile_command, shell=True)
+        compile_command = ["gcc", "-pedantic-errors", "-Wall", "-c", cfile]
+        parse(compile_file, compile_command)
         # Prepare Object files
         ofiles.append(cfile[:-1])
         ofiles[len(ofiles) - 1] += "o"
         #print(ofiles[len(ofiles) - 1])
     # Link
-    object_command = ["gcc", "-o", "code"] + ofiles + ["&>>", compile_file]
-    subprocess.call(object_command)
+    object_command = ["gcc", "-o", "code"] + ofiles
+    parse(compile_file, object_command)
     #Execute
-    exec_command = ["./code", "&>>", exec_file]
-    subprocess.call(exec_command)
+    exec_command = ["./code"]
+    parse(exec_file, exec_command)
+    return exec_file
 
 
 """C++ Code - Compile, Link, Execute"""
 def langCpp(cppfiles):
     ofiles = []
-    for cppfile in cppfiles:
+    for cfile in cfiles:
         # Compile
-        compile_command = ["g++", "-pedantic-errors", "-Wall", "-c", cppfile]
-        subprocess.call(compile_command)
+        compile_command = ["g++", "-pedantic-errors", "-Wall", "-c", cfile]
+        parse(compile_file, compile_command)
         # Prepare Object files
-        ofiles.append(cppfile[:-3])
+        ofiles.append(cfile[:-3])
         ofiles[len(ofiles) - 1] += "o"
+        #print(ofiles[len(ofiles) - 1])
     # Link
-    object_command = ["g++", "-o", "code"] + ofiles + ["&>>", compile_file]
-    subprocess.call(object_command)
+    object_command = ["g++", "-o", "code"] + ofiles
+    parse(compile_file, object_command)
     #Execute
-    exec_command = ["./code", "&>>", exec_file]
-    subprocess.call(exec_command)
+    exec_command = ["./code"]
+    parse(exec_file, exec_command)
+    return exec_file
 
 
 """Java Code - Compile, Execute"""
@@ -73,20 +85,16 @@ def langJava(javafiles):
 
 """JavaScript Code - Execute"""
 def langJS(jsfiles):
-    print("WIP")
+    exec_command = ["node", jsfiles[0]]
+    parse(exec_file, exec_command)
+    return exec_file
 
 
 """Python Code - Execute"""
 def langPy(pyfiles):
-    logfile = open(exec_file, "w")
-    proc=subprocess.Popen(["python3", "text.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    for line in proc.stdout:
-        sys.stdout.write(line.decode('utf-8'))
-        logfile.write(line.decode('utf-8'))
-    proc.wait
-    logfile.close()
-    with open(exec_file, "r") as f:
-         return f.read()
+    exec_command = ["python3", pyfiles[0]]
+    parse(exec_file, exec_command)
+    return exec_file
 
 
 """Dictionary of Supported Languages"""

@@ -4,34 +4,33 @@ import os
 import timeit
 import getpass
 import datetime
-# import cProfile
-# import re
+import subprocess
+from subprocess import call
+from memprof import *
 
-start = time.clock()
-runTime = time.time()
+def analyze(language, input_file):
+    analytics = {}
+    start = time.clock()
+    runTime = time.time()
+    analytics["Language Detected"] = language
+    data = str(getpass.getuser())
+    analytics["User"] = data
+    data = str(time.asctime(time.localtime(time.time())))
+    analytics["Boot Time"] = data
+    data = str(time.clock() - start)
+    analytics["Memory (CPU)"] = data
+    data = str((time.time() - runTime) * 1000)
+    analytics["Runtime"] = data
+    if language == "Python":
+        memeproof(input_file)
+    return analytics
 
-#python
-print("Language detected: Python")
-print("User: %s" % (getpass.getuser()))
-print("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
-print("Memory (CPU): %s" % ((time.clock() - start)))
-print("Runtime: %s" % (time.time() - runTime))
-print("RAM Usage: %s" % str(os.popen('free -t -m').read()))
 
-# print("Status: %s" % cProfile.run('re.compile()')
+@memprof(plot = True)
+def memeproof(input_file):
+    RAM = ["python3", "-m", "memprof", input_file]
+    subprocess.call(RAM)
 
-#javascript
-print("Language detected: JavaScript")
-print("User: %s" % (getpass.getuser()))
-print("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
-print("Memory (CPU): %s" % (time.clock() - start))
-print("Runtime: %s" % (time.time() - runTime))
-print("RAM Usage: %s" % str(os.popen('free -t -m').read()))
 
-#C
-print("Language detected: C")
-print("User: %s" % (getpass.getuser()))
-print("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
-print("Memory (CPU): %s" % (time.clock() - start))
-print("Runtime: %s" % (time.time() - runTime))
-print("RAM Usage: %s" % str(os.popen('free -t -m').read()))
+#analyze("Python")
+#memeproof()

@@ -1,0 +1,5 @@
+Language detected: Python
+User: trevin
+Boot Time: Sun Jul 30 03:05:34 2017
+Memory (CPU): 4.399999999993298e-05
+Runtime: 0.051021575927734375

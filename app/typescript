@@ -1,129 +1,0 @@
-Script started on Sat 29 Jul 2017 02:22:30 PM HST
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ git pull
-remote: Counting objects: 21, done.[K
-remote: Compressing objects:   8% (1/12)   [Kremote: Compressing objects:  16% (2/12)   [Kremote: Compressing objects:  25% (3/12)   [Kremote: Compressing objects:  33% (4/12)   [Kremote: Compressing objects:  41% (5/12)   [Kremote: Compressing objects:  50% (6/12)   [Kremote: Compressing objects:  58% (7/12)   [Kremote: Compressing objects:  66% (8/12)   [Kremote: Compressing objects:  75% (9/12)   [Kremote: Compressing objects:  83% (10/12)   [Kremote: Compressing objects:  91% (11/12)   [Kremote: Compressing objects: 100% (12/12)   [Kremote: Compressing objects: 100% (12/12), done.[K
-remote: Total 21 (delta 9), reused 21 (delta 9), pack-reused 0[K
-Unpacking objects:   4% (1/21)   Unpacking objects:   9% (2/21)   Unpacking objects:  14% (3/21)   Unpacking objects:  19% (4/21)   Unpacking objects:  23% (5/21)   Unpacking objects:  28% (6/21)   Unpacking objects:  33% (7/21)   Unpacking objects:  38% (8/21)   Unpacking objects:  42% (9/21)   Unpacking objects:  47% (10/21)   Unpacking objects:  52% (11/21)   Unpacking objects:  57% (12/21)   Unpacking objects:  61% (13/21)   Unpacking objects:  66% (14/21)   Unpacking objects:  71% (15/21)   Unpacking objects:  76% (16/21)   Unpacking objects:  80% (17/21)   Unpacking objects:  85% (18/21)   Unpacking objects:  90% (19/21)   Unpacking objects:  95% (20/21)   Unpacking objects: 100% (21/21)   Unpacking objects: 100% (21/21), done.
-From github.com:Viltaria/AngelHack
-   4c40122..9f4441d  master     -> origin/master
-Updating 4c40122..9f4441d
-Fast-forward
- app/analytics.py       | 11 [32m+++++++[m[31m--[m
- app/language_detect.py | 24 [32m+++++++++++++++++++[m
- app/test.c             |  2 [32m+[m[31m-[m
- app/unix_compile.py    | 38 [32m+++++++++++++++++++[m[31m-----------[m
- app/win_compile.py     | 63 [32m++++++++++++++++++++++++++++++++++++++++++++++++++[m
- 5 files changed, 121 insertions(+), 17 deletions(-)
- create mode 100644 app/language_detect.py
- create mode 100644 app/win_compile.py
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ ls
-analytics.py  cool.h  language_detect.py  typescript       win_compile.py
-cool.c        io.py   test.c              unix_compile.py
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ python3 analytics.py 
-Language detected: Python
-Runtime: 1.5000000000001124e-05
-Memory Usage (CPU): 2
-CPU TIME CLOCK: 3
-Language detected: JavaScript
-Runtime: 5.3999999999998494e-05
-Memory Usage (CPU): 2
-CPU TIME CLOCK: 3
-Language detected: C
-Runtime: 8.599999999999927e-05
-Memory Usage (CPU): 2
-CPU TIME CLOCK: 3
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ [K]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ python3 analytics.py ls[Kgit pullshllls[Kpython3 analytics.py [K[K[K[K[K[K[K[K[K[K[K[K[Kio.py 
-Traceback (most recent call last):
-  File "io.py", line 20, in <module>
-    app.run(debug = True)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 841, in run
-    run_simple(host, port, self, **options)
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/serving.py", line 720, in run_simple
-    s.bind((hostname, port))
-OSError: [Errno 98] Address already in use
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ if
-if        ifconfig  ifdown    ifquery   iftop     ifup      
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ if
-if        ifconfig  ifdown    ifquery   iftop     ifup      
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ ifconfig 
-enp9s0    Link encap:Ethernet  HWaddr f8:a9:e 20, in <module>
-    app.run(debug = True)
-  File "/usr/local/lib/python3.5/dist-packages/flask/app.py", line 841, in run
-    run_simple(host, port, self, **options)
-  File "/usr/local/lib/python3.5/dist-packages/werkzeug/serving.py", line 720, in run_simple
-    s.bind((hostname, port))
-OSError: [Errno 98] Address already in use
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ if
-if        ifconfig  ifdown    ifquery   iftop     ifup      
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ if
-if        ifconfig  ifdown    ifquery   iftop     ifup      
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ ifconfig 
-enp9s0    Link encap:Ethernet  HWaddr f8:a9:63:2e:68:60  
-          UP BROADCAST MULTICAST  MTU:1500  Metric:1
-          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
-
-lo        Link encap:Local Loopback  
-          inet addr:127.0.0.1  Mask:255.0.0.0
-          inet6 addr: ::1/128 Scope:Host
-          UP LOOPBACK RUNNING  MTU:65536  Metric:1
-          RX packets:6062 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:6062 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1 
-          RX bytes:585419 (585.4 KB)  TX bytes:585419 (585.4 KB)
-
-wlp8s0    Link encap:Ethernet  HWaddr e8:b1:fc:08:e5:44  
-          inet addr:10.10.110.241  Bcast:10.10.110.255  Mask:255.255.255.0
-          inet6 addr: fe80::2ea3:8f1a:6d83:ecc9/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:482534 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:109040 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:578999533 (578.9 MB)  TX bytes:44960203 (44.9 MB)
-
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ ufw
-ERROR: not enough args
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ ufw allow 5000
-ERROR: You need to be root to run this script
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ sudo !!
-sudo ufw allow 5000
-sudo: unable to resolve host trevin
-[sudo] password for trevin: 
-Rule added
-Rule added (v6)
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[01;34m~/AngelHack/app[00m$ ufw off
-ERROR: Invalid syntax
-
-Usage: ufw COMMAND
-
-Commands:
- enable                          enables the firewall
- disable                         disables the firewall
- default ARG                     set default policy
- logging LEVEL                   set logging to LEVEL
- allow ARGS                      add allow rule
- deny ARGS                       add deny rule
- reject ARGS                     add reject rule
- limit ARGS                      add limit rule
- delete RULE|NUM                 delete RULE
- insert NUM RULE                 insert RULE at NUM
- route RULE                      add route RULE
- route delete RULE|NUM           delete route RULE
- route insert NUM RULE           insert route RULE at NUM
- reload                          reload firewall
- reset                           reset firewall
- status                          show firewall status
- status numbered                 show firewall status as numbered list of RULES
- status verbose                  show verbose firewall status
- show ARG                        show firewall report
- version                         display version information
-
-Application profile commands:
- app list                        list application profiles
- app info PROFILE                show information on PROFILE
- app update PROFILE              update PROFILE
- app default ARG                 set default application policy
-
-]0;trevin@trevin: ~/AngelHack/app[01;32mtrevin@trevin[00m:[0
