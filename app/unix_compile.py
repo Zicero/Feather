@@ -78,7 +78,7 @@ def langJS(jsfiles):
 """Python Code - Execute"""
 def langPy(pyfiles):
     logfile = open(exec_file, "w")
-    proc=subprocess.Popen(["py", "text.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    proc=subprocess.Popen(["python3", "text.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     for line in proc.stdout:
         sys.stdout.write(line.decode('utf-8'))
         logfile.write(line.decode('utf-8'))
@@ -105,6 +105,6 @@ language = {
 compile_file = "compile_file.txt"
 exec_file = "exec_file.txt"
 
-files = ["text.py"]
-codeCompile("Python", files);
-print("Exit!")
+#files = ["text.py"]
+#codeCompile("Python", files);
+#print("Exit!")

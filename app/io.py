@@ -10,6 +10,7 @@ client = app.test_client()
 """Receives code input/tags and parses data"""
 @app.route('/', methods=['POST'])
 def parse_request():
+
     data_receive = request.json
     code_string = data_receive['code']['text']
     code_string.strip()
@@ -23,12 +24,15 @@ def parse_request():
     test.write(code_string)
     test.close()
 
+    obj = {}
     codeCompile(lang, ["text.py"])
+    obj['code'] = code_string
 
-    send = open("compile_file.txt", "r")
+    with open("compile_file.txt") as f:
+        send = f.read()
+        obj['output'] = send
 
-
-    return (jsonify(send))
+    return (jsonify(obj))
 
 
 

@@ -1,4 +1,20 @@
-Traceback (most recent call last):
-  File "text.py", line 7, in <module>
-    request = Reuest(url, urlencode(post_fields).encode())
-NameError: name 'Reuest' is not defined
+{
+  "args": {}, 
+  "data": "", 
+  "files": {}, 
+  "form": {
+    "foo": "bar"
+  }, 
+  "headers": {
+    "Accept-Encoding": "identity", 
+    "Connection": "close", 
+    "Content-Length": "7", 
+    "Content-Type": "application/x-www-form-urlencoded", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Python-urllib/3.5"
+  }, 
+  "json": null, 
+  "origin": "173.198.89.251", 
+  "url": "https://httpbin.org/post"
+}
+
