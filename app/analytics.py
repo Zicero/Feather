@@ -21,7 +21,8 @@ def analyze(language, input_file):
     analytics["Memory (CPU)"] = data
     data = str((time.time() - runTime) * 1000)
     analytics["Runtime"] = data
-    memeproof(input_file)
+    if language == "Python":
+        memeproof(input_file)
     return analytics
 
 
