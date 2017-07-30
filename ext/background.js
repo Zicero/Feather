@@ -1,7 +1,7 @@
 chrome.extension.onMessage.addListener(function(message, sender, sendResponse){
   $.ajax({
 		type: 'POST',
-		url: 'http://f8e15def.ngrok.io',
+		url: 'http://3d3bb348.ngrok.io',
 		crossDomain: true,
 		data: JSON.stringify(message),
 		contentType: 'application/json; charset=utf-8',
@@ -11,6 +11,10 @@ chrome.extension.onMessage.addListener(function(message, sender, sendResponse){
 			console.log(data);
 			data.whou = 'itme';
 		  sendResponse(data);
-		}
+		},
+    error: function (data) {
+			data.error = data.statusText;
+      sendResponse(data);
+    }
 	});
 });

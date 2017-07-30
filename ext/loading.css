@@ -272,7 +272,7 @@
     -webkit-transform: skewX(-40deg);
     -ms-transform: skewX(-40deg);
     transform: skewX(-40deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   75% {
     -o-transform: skewX(-60deg);
@@ -280,7 +280,7 @@
     -webkit-transform: skewX(-60deg);
     -ms-transform: skewX(-60deg);
     transform: skewX(-60deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   100% {
     -o-transform: skewX(-80deg);
@@ -288,7 +288,7 @@
     -webkit-transform: skewX(-80deg);
     -ms-transform: skewX(-80deg);
     transform: skewX(-80deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
 }
 @-moz-keyframes outlineBefore {
@@ -317,7 +317,7 @@
     -webkit-transform: skewX(-40deg);
     -ms-transform: skewX(-40deg);
     transform: skewX(-40deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   75% {
     -o-transform: skewX(-60deg);
@@ -325,7 +325,7 @@
     -webkit-transform: skewX(-60deg);
     -ms-transform: skewX(-60deg);
     transform: skewX(-60deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   100% {
     -o-transform: skewX(-80deg);
@@ -333,7 +333,7 @@
     -webkit-transform: skewX(-80deg);
     -ms-transform: skewX(-80deg);
     transform: skewX(-80deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
 }
 @-webkit-keyframes outlineBefore {
@@ -362,7 +362,7 @@
     -webkit-transform: skewX(-40deg);
     -ms-transform: skewX(-40deg);
     transform: skewX(-40deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   75% {
     -o-transform: skewX(-60deg);
@@ -370,7 +370,7 @@
     -webkit-transform: skewX(-60deg);
     -ms-transform: skewX(-60deg);
     transform: skewX(-60deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   100% {
     -o-transform: skewX(-80deg);
@@ -378,7 +378,7 @@
     -webkit-transform: skewX(-80deg);
     -ms-transform: skewX(-80deg);
     transform: skewX(-80deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
 }
 @keyframes outlineBefore {
@@ -407,7 +407,7 @@
     -webkit-transform: skewX(-40deg);
     -ms-transform: skewX(-40deg);
     transform: skewX(-40deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   75% {
     -o-transform: skewX(-60deg);
@@ -415,7 +415,7 @@
     -webkit-transform: skewX(-60deg);
     -ms-transform: skewX(-60deg);
     transform: skewX(-60deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
   100% {
     -o-transform: skewX(-80deg);
@@ -423,7 +423,7 @@
     -webkit-transform: skewX(-80deg);
     -ms-transform: skewX(-80deg);
     transform: skewX(-80deg);
-    border: solid 5px #AFCBFF;
+    border: solid 5px #87F1FF;
   }
 }
 @-o-keyframes in {
@@ -440,17 +440,17 @@
   41% {
     width: 0px;
     height: 0px;
-    background: #AFCBFF;
+    background: #87F1FF;
   }
   50% {
     width: 144px;
     height: 144px;
-    background: #AFCBFF;
+    background: #87F1FF;
   }
   90% {
     width: 0px;
     height: 0px;
-    background: #AFCBFF;
+    background: #87F1FF;
   }
   91% {
     width: 0px;
@@ -477,17 +477,17 @@
   41% {
     width: 0px;
     height: 0px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   50% {
     width: 144px;
     height: 144px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   90% {
     width: 0px;
     height: 0px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   91% {
     width: 0px;
@@ -514,17 +514,17 @@
   41% {
     width: 0px;
     height: 0px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   50% {
     width: 144px;
     height: 144px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   90% {
     width: 0px;
     height: 0px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   91% {
     width: 0px;
@@ -551,17 +551,17 @@
   41% {
     width: 0px;
     height: 0px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   50% {
     width: 144px;
     height: 144px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   90% {
     width: 0px;
     height: 0px;
-    background: #3A60DB;
+    background: #A9FFF7;
   }
   91% {
     width: 0px;

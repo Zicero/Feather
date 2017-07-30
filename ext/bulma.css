@@ -1034,7 +1034,8 @@ a.has-text-danger:hover, a.has-text-danger:focus {
           box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   color: #4a4a4a;
   display: block;
-  padding: 1.25rem;
+  /*padding: 1.25rem;*/
+  padding: 0rem;
 }
 
 .box:not(:last-child) {
@@ -4893,7 +4894,7 @@ a.dropdown-item.is-active {
   user-select: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-color: black;
+  background-color: rgba(10, 10, 10, 0.2);
   border: none;
   border-radius: 290486px;
   cursor: pointer;
