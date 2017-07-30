@@ -1,3 +1,4 @@
+import sys
 import subprocess
 from subprocess import call
 
@@ -76,9 +77,15 @@ def langJS(jsfiles):
 
 """Python Code - Execute"""
 def langPy(pyfiles):
-    with open(exec_file, "w") as outfile:
-        exec_command = ["python3", "text.py"]
-        subprocess.run(exec_command, stdout=outfile, stderror=outfile)
+    logfile = open(exec_file, "w")
+    proc=subprocess.Popen(["py", "text.py"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    for line in proc.stdout:
+        sys.stdout.write(line.decode('utf-8'))
+        logfile.write(line.decode('utf-8'))
+    proc.wait()
+    # with open(exec_file, "w") as outfile:
+    #     exec_command = ["python3", "text.py"]
+    #     subprocess.run(exec_command, stdout=outfile, stderror=outfile)
     # for pyfile in pyfiles:
     #     exec_command = ["python3", pyfile]
     #     subprocess.call(exec_command, shell=True)
@@ -98,6 +105,6 @@ language = {
 compile_file = "compile_file.txt"
 exec_file = "exec_file.txt"
 
-#files = ["test.cpp"]
-#codeCompile("C++", files);
-#print("Exit!")
+files = ["text.py"]
+codeCompile("Python", files);
+print("Exit!")
