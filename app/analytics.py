@@ -16,7 +16,8 @@ print("User: %s" % (getpass.getuser()))
 print("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
 print("Memory (CPU): %s" % ((time.clock() - start)))
 print("Runtime: %s" % (time.time() - runTime))
-print("RAM Usage: %s" % str(os.popen('free -t -m').readlines()))
+print("RAM Usage: %s" % str(os.popen('free -t -m').read()))
+
 # print("Status: %s" % cProfile.run('re.compile()')
 
 #javascript
@@ -25,7 +26,7 @@ print("User: %s" % (getpass.getuser()))
 print("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
 print("Memory (CPU): %s" % (time.clock() - start))
 print("Runtime: %s" % (time.time() - runTime))
-print("RAM Usage: %s" % str(os.popen('free -t -m').readlines()))
+print("RAM Usage: %s" % str(os.popen('free -t -m').read()))
 
 #C
 print("Language detected: C")
@@ -33,4 +34,4 @@ print("User: %s" % (getpass.getuser()))
 print("Boot Time: %s" % (time.asctime(time.localtime(time.time()))))
 print("Memory (CPU): %s" % (time.clock() - start))
 print("Runtime: %s" % (time.time() - runTime))
-print("RAM Usage: %s" % str(os.popen('free -t -m').readlines()))
+print("RAM Usage: %s" % str(os.popen('free -t -m').read()))
