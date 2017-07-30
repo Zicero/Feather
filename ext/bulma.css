@@ -4893,7 +4893,7 @@ a.dropdown-item.is-active {
   user-select: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-color: rgba(10, 10, 10, 0.2);
+  background-color: black;
   border: none;
   border-radius: 290486px;
   cursor: pointer;
@@ -4922,7 +4922,7 @@ a.dropdown-item.is-active {
 }
 
 .modal-close:before, .modal-close:after {
-  background-color: white;
+  background-color: grey;
   content: "";
   display: block;
   left: 50%;

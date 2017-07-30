@@ -22,8 +22,8 @@
     "https://maxcdn.bootstrapcdn.com/*"
    ],
 	"content_scripts": [{
-		"js": ["jquery.min.js", "moon.js", "index.js"],
-    "css" : ["bulma.css"],
+		"js": ["jquery.min.js", "moon.js", "quill.js", "index.js"],
+    "css" : ["bulma.css", "loading.css", "quill.snow.css"],
 		"matches": ["*://*/*"]
   }],
   "background": {
