@@ -6,6 +6,7 @@ import getpass
 import datetime
 import subprocess
 from subprocess import call
+from memprof import *
 # import cProfile
 # import re
 
@@ -21,8 +22,9 @@ start = time.clock()
 runTime = time.time()
 run("Python")
 
-
-RAMCOM = ["python", "-m", "memory_profiler", "text.py"]
+@memprof
+# memory_profiler
+RAMCOM = ["python", "-m", "memeprof", "text.py"]
 print("RAM Usage: %s" % (subprocess.call(RAMCOM, shell=True)))
 
 # #python
