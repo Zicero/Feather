@@ -22,18 +22,18 @@ def langC(cfiles):
     ofiles = []
     for cfile in cfiles:
         # Compile
-        compile_command = ["gcc", "-pedantic-errors", "-Wall", "-c", cfile, "2>>", compile_file]
+        compile_command = ["gcc", "-pedantic-errors", "-Wall", "-c", cfile, "&>>", compile_file]
         subprocess.call(compile_command, shell=True)
         # Prepare Object files
         ofiles.append(cfile[:-1])
         ofiles[len(ofiles) - 1] += "o"
         #print(ofiles[len(ofiles) - 1])
     # Link
-    object_command = ["gcc", "-o", "code"] + ofiles + ["2>>", compile_file]
-    subprocess.call(object_command, shell=True)
+    object_command = ["gcc", "-o", "code"] + ofiles + ["&>>", compile_file]
+    subprocess.call(object_command)
     #Execute
-    exec_command = ["./code", "1>>", exec_file]
-    subprocess.call(exec_command, shell=True)
+    exec_command = ["./code", "&>>", exec_file]
+    subprocess.call(exec_command)
 
 
 """C++ Code - Compile, Link, Execute"""
@@ -41,17 +41,17 @@ def langCpp(cppfiles):
     ofiles = []
     for cppfile in cppfiles:
         # Compile
-        compile_command = ["g++", "-pedantic-errors", "-Wall", "-c", cppfile, "2>>", compile_file]
-        subprocess.call(compile_command, shell=True)
+        compile_command = ["g++", "-pedantic-errors", "-Wall", "-c", cppfile]
+        subprocess.call(compile_command)
         # Prepare Object files
         ofiles.append(cppfile[:-3])
         ofiles[len(ofiles) - 1] += "o"
     # Link
-    object_command = ["g++", "-o", "code"] + ofiles + ["2>>", compile_file]
-    subprocess.call(object_command, shell=True)
+    object_command = ["g++", "-o", "code"] + ofiles + ["&>>", compile_file]
+    subprocess.call(object_command)
     #Execute
-    exec_command = ["./code", "1>>", exec_file]
-    subprocess.call(exec_command, shell=True)
+    exec_command = ["./code", "&>>", exec_file]
+    subprocess.call(exec_command)
 
 
 """Java Code - Compile, Execute"""
@@ -59,11 +59,11 @@ def langJava(javafiles):
     exec_name = javafiles[0][:-5]
     for javafile in javafiles:
         # Compile
-        compile_command = ["javac", javafile, "2>>", compile_file]
-        subprocess.call(compile_command, shell=True)
+        compile_command = ["javac", javafile, "&>>", compile_file]
+        subprocess.call(compile_command)
     # Execute
-    exec_command = ["java", exec_name, "1>>", exec_file]
-    subprocess.call(exec_command, shell=True)
+    exec_command = ["java", exec_name, "&>>", exec_file]
+    subprocess.call(exec_command)
 
 
 """JavaScript Code - Execute"""
@@ -73,8 +73,8 @@ def langJS(jsfiles):
 
 """Python Code - Execute"""
 def langPy(pyfiles):
-    f = open(compile_file, "w")
-    subprocess.call(["python3", "text.py"], stdout=f)
+    exec_command = ["python3", "text.py", "&>>", exec_file]
+    subprocess.call(exec_command)
     # for pyfile in pyfiles:
     #     exec_command = ["python3", pyfile]
     #     subprocess.call(exec_command, shell=True)
@@ -93,7 +93,6 @@ language = {
 """Files"""
 compile_file = "compile_file.txt"
 exec_file = "exec_file.txt"
-source_folder = "test_code"
 
 #files = ["test.cpp"]
 #codeCompile("C++", files);
