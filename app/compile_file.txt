@@ -1,0 +1,120 @@
+gcc: error: test.java: Java compiler not installed on this system
+gcc: error: test.javo: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+gcc: error: test.java: Java compiler not installed on this system
+gcc: error: test.javo: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+'javac' is not recognized as an internal or external command,
+operable program or batch file.
+'javac' is not recognized as an internal or external command,
+operable program or batch file.
+test.java:6: error: ';' expected
+        first.fuck()
+                    ^
+1 error
+test.java:6: error: ';' expected
+        first.fuck()
+                    ^
+1 error
+first.java:6: error: ';' expected
+        System.out.println("Incredible!")
+                                         ^
+1 error
+test.java:6: error: ';' expected
+        first.fuck()
+                    ^
+1 error
+first.java:6: error: ';' expected
+        System.out.println("Incredible!")
+                                         ^
+1 error
+test.java:6: error: ';' expected
+        first.fuck()
+                    ^
+1 error
+first.java:6: error: ';' expected
+        System.out.println("Incredible!")
+                                         ^
+1 error
+.\first.java:6: error: ';' expected
+        System.out.println("Incredible!")
+                                         ^
+1 error
+first.java:6: error: ';' expected
+        System.out.println("Incredible!")
+                                         ^
+1 error
+gcc: error: CreateProcess: No such file or directory
+gcc: error: test.o: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+gcc: error: CreateProcess: No such file or directory
+gcc: error: test.o: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+gcc: error: CreateProcess: No such file or directory
+gcc: error: test.o: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\postypes.h:40:0,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iosfwd:40,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:38,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from test.cpp:1:
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:164:11: error: '::vfwscanf' has not been declared
+   using ::vfwscanf;
+           ^~~~~~~~
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:170:11: error: '::vswscanf' has not been declared
+   using ::vswscanf;
+           ^~~~~~~~
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:174:11: error: '::vwscanf' has not been declared
+   using ::vwscanf;
+           ^~~~~~~
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:191:11: error: '::wcstof' has not been declared
+   using ::wcstof;
+           ^~~~~~
+In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.h:39:0,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.h:37,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:44,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from test.cpp:1:
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwctype:89:11: error: '::iswblank' has not been declared
+   using ::iswblank;
+           ^~~~~~~~
+g++: error: test.o: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\postypes.h:40:0,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iosfwd:40,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:38,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from test.cpp:1:
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:164:11: error: '::vfwscanf' has not been declared
+   using ::vfwscanf;
+           ^~~~~~~~
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:170:11: error: '::vswscanf' has not been declared
+   using ::vswscanf;
+           ^~~~~~~~
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:174:11: error: '::vwscanf' has not been declared
+   using ::vwscanf;
+           ^~~~~~~
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwchar:191:11: error: '::wcstof' has not been declared
+   using ::wcstof;
+           ^~~~~~
+In file included from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.h:39:0,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.h:37,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:44,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from test.cpp:1:
+d:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cwctype:89:11: error: '::iswblank' has not been declared
+   using ::iswblank;
+           ^~~~~~~~
+g++: error: test.o: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
