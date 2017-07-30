@@ -8,7 +8,10 @@ client = app.test_client()
 @app.route('/', methods=['POST'])
 def parse_request():
     data_receive = request.json
-    print (data_receive)
+    code_string = data_receive['code']['text']
+    code_string.strip()
+    print (code_string)
+    return 'fuck off'
 
 """Sends output/collected data to ext as json"""
 @app.route('/')

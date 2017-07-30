@@ -22,9 +22,12 @@
     "https://maxcdn.bootstrapcdn.com/*"
    ],
 	"content_scripts": [{
-		"js": ["jquery.min.js", "moon.js", "quill.js", "index.js"],
-    "css" : ["bulma.css", "loading.css", "quill.snow.css"],
-		"matches": ["*://*/*"]
+		"js": ["jquery.min.js", "moon.js", "quill.js", "chartist.js", "index.js"],
+    "css" : ["bulma.css", "loading.css", "quill.snow.css", "chartist.css"],
+		"matches": [
+      "*://stackoverflow.com/*",
+      "*://github.com/*"
+    ]
   }],
   "background": {
     "scripts": ["jquery.min.js", "background.js"]

@@ -1,6 +1,6 @@
 $("code").each(function() {
   var code = $(this);
-  if (code.text().length > 50) {
+  if (code.text().length > 100) {
     var button = $(`
       <pre style="text-align:right;">
         <div style="
@@ -36,13 +36,17 @@ $("code").each(function() {
 var app, editor;
 
 function click() {
+  $('#angelhack').remove();
   const data = $($(this).find($('code')));
   chrome.runtime.sendMessage({
 		location: window.location,
     code: {
       text: data.text()
+      // text: data.text().replace('urlencode', 'fag')
     }
-	});
+	}, function (data) {
+    outputReceived(data);
+  });
   var div = $(`
     <div id="angelhack">
       <div m-if="loading" class="load">
@@ -85,14 +89,14 @@ function click() {
   };
   var editor = new Quill('#editor', options);
 
-  setTimeout(function (){
-    app.set('loading', false);
-    $('.modal').addClass('is-active');
-  }, 3000)
+  editor.on('text-change', function(delta, oldDelta, source) {
+    app.set('code', $('#editor').text());
+  });
 }
 
-
-// chrome.extension.onRequest.addListener(function(request, sender, sendResponse){
-
-  // app.set('loading', false);
-// }
+function outputReceived(request) {
+  app.set('code', request.code);
+  $('.ql-editor').children('p').html(request.code);
+  $('.modal').addClass('is-active');
+  app.set('loading', false);
+}
