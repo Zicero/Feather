@@ -11,40 +11,28 @@ client = app.test_client()
 @app.route('/', methods=['POST'])
 def parse_request():
 
+    #Receives and parses code
     data_receive = request.json
     code_string = data_receive['code']['text']
     code_string.strip()
     code_string = code_string.lstrip()
     print (code_string)
 
+    #Detects code language
     lang = detect(code_string)
     print (lang)
 
+    #Preps code for compile
     test = open("text.py", "w")
     test.write(code_string)
     test.close()
 
+    #Obj to be shipped
     obj = {}
-    codeCompile(lang, ["text.py"])
+    obj['output'] = codeCompile(lang, ["text.py"])
     obj['code'] = code_string
 
-    with open("compile_file.txt") as f:
-        send = f.read()
-        obj['output'] = send
-
     return (jsonify(obj))
-
-
-
-
-
-
-
-"""Sends output/collected data to ext as json"""
-# @app.route('/')
-# def output_send():
-#     data_send = get_data()
-#     return jsonify(data_send)
 
 if __name__ == "__main__":
     app.run(debug = True)
